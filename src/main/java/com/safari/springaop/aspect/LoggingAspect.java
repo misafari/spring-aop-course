@@ -8,7 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 
-    @Before("execution(public void save())")
+//    @Before("execution(public void save())")
+//    @Before("execution(void com.safari.springaop.service.UserService.save())")
+//    @Before("execution(* com.safari.springaop.service.UserService.save())")
+    @Before("execution(* com.safari.springaop.service.UserService.save*())")
     public void logInfo() {
         System.out.println(getClass() + "Logging Ino <=======================");
     }
