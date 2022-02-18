@@ -11,7 +11,12 @@ public class SpringAopApplication {
 
         UserService userService = context.getBean("userService", UserService.class);
 
-        userService.save();
+        var save = userService.save();
+        var all = userService.getAllUsers();
+
+        System.out.println("Result In Main");
+        System.out.println(all);
+        System.out.println("Result In Main");
 
         context.close();
     }
