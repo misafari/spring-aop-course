@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    public void save() {
+    public void save(boolean arg) {
         System.out.println("UserService Save Done.");
     }
 }
