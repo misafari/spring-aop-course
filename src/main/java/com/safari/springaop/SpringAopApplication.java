@@ -12,6 +12,7 @@ public class SpringAopApplication {
         UserService userService = context.getBean("userService", UserService.class);
 
         userService.save();
+        userService.findByUsername("admin");
 
         context.close();
     }

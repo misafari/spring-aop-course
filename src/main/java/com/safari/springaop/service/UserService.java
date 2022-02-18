@@ -7,4 +7,8 @@ public class UserService {
     public void save() {
         System.out.println("UserService Save Done.");
     }
+
+    public void findByUsername(String username) {
+        System.out.println("UserService findByUsername Done.");
+    }
 }
