@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(2)
-public class LoggingAspect {
+@Order(1)
+public class SecondLoggingAspect {
 
     @Before("execution(public void save())")
     public void logInfo() {
