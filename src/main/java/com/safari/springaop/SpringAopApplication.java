@@ -11,7 +11,12 @@ public class SpringAopApplication {
 
         UserService userService = context.getBean("userService", UserService.class);
 
-        userService.save();
+        try {
+            userService.save(false);
+            userService.save(true);
+        }catch (Exception e) {
+            System.out.println("Handle In Main " + e.getMessage());
+        }
 
         context.close();
     }
